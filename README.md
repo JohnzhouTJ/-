@@ -31,6 +31,20 @@
     - ptrname: 指针起始所在位置 0-从头偏移 1-从当前位置偏移 2-从末尾偏移
     - 返回值: 偏移后指针所在地址
 - mkfile(char *name, int mode) 创建文件
-    - name: 文件名
+    - name: 文件名（相对路径名）
     - mode: 读写权限，同open当中的mode
 - rm(char *name) 删除目录/文件
+    - name: 目录/文件名（相对路径名）
+- ls() 查看当前目录下所有文件夹和文件
+- mkdir(char* dirname) 创建文件夹
+    - name: 文件夹名
+- cd(char* dirname) 进入目录
+    - name: 目录名（相对路径名）
+- cat(char* dirname) 显示文件
+    - name: 文件名（相对路径名）
+- copyin(char* ofpath, char *  ifpath) 将外部文件写入该文件系统
+    - ofpath: 文件的外部相对路径名
+    - ifpath: 文件的内部相对路径名
+- copyout(char* ifpath, char *  ofpath) 将内部文件写入外部系统
+    - ifpath: 同copyin ifpath
+    - ofpath: 同copyin ofpath
